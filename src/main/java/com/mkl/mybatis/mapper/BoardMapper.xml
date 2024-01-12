@@ -11,7 +11,7 @@
    </select>
    
    <insert id="writeDao">
-   	INSERT INTO
+   		INSERT INTO
    		 freeboard(fbnum, fbname, fbtitle, fbcontent, fbhit)
    			 VALUES(freeboard_seq.nextval, #{param1}, #{param2}, #{param3}, 0)
    
@@ -21,8 +21,6 @@
    	SELECT * FROM freeboard WHERE fbnum = #{param1}	
    </select>
    
-   
-      
    <update id="modifyDao">
   	UPDATE freeboard SET fbtitle=#{param1}, fbname=#{param2}, fbcontent=#{param3}
   		WHERE fbnum=#{param4} 		

@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body> 
 	<%
 		String idcheck = request.getAttribute("idFlag").toString();
 		//컨트롤러에서 model객체에 넣어서 보내준 값을 빼는 방법

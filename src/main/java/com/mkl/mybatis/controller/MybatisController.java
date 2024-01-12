@@ -22,7 +22,7 @@ public class MybatisController {
 	private SqlSession sqlSession;
 
 	@RequestMapping(value = "/list")
-	public String liSt(Model model) {
+	public String list(Model model) {
 		
 		//MybatisDao dao = new MybatisDao();
 		MybatisDao dao = sqlSession.getMapper(MybatisDao.class); //dao 객체 주입
@@ -44,13 +44,14 @@ public class MybatisController {
 		if(sid == null) {//로그인 상태 여부 확인 -> 참이면 로그인하지 않은 상태
 			return "redirect:login";
 		} else {//로그인된 상태
+			
 			model.addAttribute("memberDto", dao.checkIdDao(sid));
 			
 			return "write_form";
 		}
 	}
 	
-	@RequestMapping(value = "write")
+	@RequestMapping(value = "/write")
 	public String write(HttpServletRequest request) {
 		
 		MybatisDao dao = sqlSession.getMapper(MybatisDao.class);//dao 객체 분리 생성
@@ -62,7 +63,7 @@ public class MybatisController {
 	@RequestMapping(value = "/content_view")
 	public String content_view(HttpServletRequest request, Model model) {
 		
-		MybatisDao dao = sqlSession.getMapper(MybatisDao.class);
+		MybatisDao dao = sqlSession.getMapper(MybatisDao.class);//dao 객체 분리 생성
 		model.addAttribute("fboardDto", dao.contentDao(request.getParameter("fbnum")));
 		
 		return "content_view";

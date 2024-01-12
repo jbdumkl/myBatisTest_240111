@@ -25,12 +25,11 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
+	<!--  utf-8 한글 처리   -->
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-
-	<!--  한글 utf-8 세팅   -->
 
 	<filter>
       <filter-name>encodingFilter</filter-name>

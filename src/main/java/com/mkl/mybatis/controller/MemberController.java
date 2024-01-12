@@ -64,6 +64,7 @@ public class MemberController {
 		MemberDao dao = sqlSession.getMapper(MemberDao.class);
 		int loginFlag = dao.checkIdPwDao(request.getParameter("mid"), request.getParameter("mpw"));
 		//loginFlag값이 1이면 로그인 성공, 0이면 로그인 실패
+		System.out.println(loginFlag);
 		
 		if(loginFlag == 1) {//로그인 성공
 			session.setAttribute("sessionId", request.getParameter("mid"));

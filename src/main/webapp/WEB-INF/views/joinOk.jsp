@@ -11,6 +11,6 @@
 	<hr>
 	<h3>${memberName }님 회원 가입을 축하드립니다!</h3>
 	게시판에 글을 열심히 써주세요!</br>
-	<a href="Login">회원 로그인 바로가기</a>
+	<a href="login">회원 로그인 바로가기</a>
 </body>
 </html>
