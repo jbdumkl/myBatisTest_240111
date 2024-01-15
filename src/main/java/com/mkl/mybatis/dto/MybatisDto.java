@@ -8,14 +8,14 @@ public class MybatisDto {
 	private String fbname;
 	private String fbtitle;
 	private String fbcontent;
-	private String fbhit;
+	private int fbhit;
 	private Timestamp fbdate;
 	
 	public MybatisDto() {
 		super();
 	}
 	
-	public MybatisDto(int fbnum, String fbname, String fbtitle, String fbcontent, String fbhit, Timestamp fbdate) {
+	public MybatisDto(int fbnum, String fbname, String fbtitle, String fbcontent, int fbhit, Timestamp fbdate) {
 		super();
 		this.fbnum = fbnum;
 		this.fbname = fbname;
@@ -49,10 +49,10 @@ public class MybatisDto {
 	public void setFbcontent(String fbcontent) {
 		this.fbcontent = fbcontent;
 	}
-	public String getFbhit() {
+	public int getFbhit() {
 		return fbhit;
 	}
-	public void setFbhit(String fbhit) {
+	public void setFbhit(int fbhit) {
 		this.fbhit = fbhit;
 	}
 	public Timestamp getFbdate() {
